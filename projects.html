@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects — Jasmati Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=2" />
+<style>
+  .project-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+  .project-card__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .project-card__content {
+    padding: 32px 40px 40px;
+  }
+  .project-card__tag {
+    display: inline-block;
+    background: var(--pink);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .project-card__title {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+  }
+  .project-card__desc {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .project-card__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .project-card__feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .project-card__feature::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--pink);
+    border-radius: 50%;
+  }
+  .project-card__links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .project-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+  }
+  .project-card__link:hover {
+    border-color: var(--pink);
+    background: rgba(255,255,255,0.05);
+  }
+  .project-card__link--primary {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: #000;
+  }
+  .project-card__link--primary:hover {
+    background: #f5c0d0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand">
+      <img class="logo-img" src="assets/jasmati-logo.png" alt="Jasmati" />
+      <span class="brand__name"><b>Jasmati</b></span>
+    </a>
+    <nav class="nav">
+      <div class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html" class="is-active">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="contact.html" class="btn btn--pink">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <span class="eyebrow" style="margin-bottom:20px;display:inline-flex;">Projects</span>
+      <h1 style="margin-top:14px;">Real systems, <span class="serif italic accent">live in production.</span></h1>
+    </div>
+    <p class="page-hero__sub">Not mockups. Not demos. These are actual tools running daily for real businesses.</p>
+  </div>
+</section>
+
+<section class="container" style="padding-top: 60px; padding-bottom: 100px;">
+
+  <!-- Food Cost Pro -->
+  <article class="project-card">
+    <img src="assets/projects/foodcost-dashboard.png" alt="Food Cost Pro Dashboard" class="project-card__img" />
+    <div class="project-card__content">
+      <span class="project-card__tag">Live Project</span>
+      <h2 class="project-card__title">Food Cost Pro</h2>
+      <p class="project-card__desc">
+        A restaurant owner was spending 10+ hours a week manually entering invoices into spreadsheets.
+        Now PDFs hit a folder and the system handles the rest — extraction, price tracking, recipe costing,
+        and alerts when prices spike. Replaces $400/month in SaaS tools.
+      </p>
+      <div class="project-card__features">
+        <span class="project-card__feature">AI-powered invoice parsing</span>
+        <span class="project-card__feature">Real-time recipe costing</span>
+        <span class="project-card__feature">Price spike alerts</span>
+        <span class="project-card__feature">Cross-vendor price comparison</span>
+        <span class="project-card__feature">Telegram bot integration</span>
+        <span class="project-card__feature">Multi-restaurant support</span>
+      </div>
+      <div class="project-card__links">
+        <a href="https://demo.jasmatiproduction.com" class="project-card__link project-card__link--primary">Try the demo</a>
+        <a href="contact.html" class="project-card__link">Build something similar</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- More projects can be added here -->
+
+</section>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__brand">
+      <img class="logo-img" src="assets/jasmati-logo.png" alt="Jasmati" />
+      <span><b>Jasmati</b> Production</span>
+    </div>
+    <nav class="site-footer__nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="site-footer__copy">Jasmati Production LLC · Colorado · 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
