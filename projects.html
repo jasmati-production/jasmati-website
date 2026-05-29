@@ -95,6 +95,41 @@
   .project-card__link--primary:hover {
     background: #f5c0d0;
   }
+  .project-gallery {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+  }
+  .project-gallery__item {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 700px;
+    scroll-snap-align: start;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .project-gallery__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .project-gallery__caption {
+    background: rgba(0,0,0,0.7);
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .project-gallery__caption strong {
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    .project-gallery__item {
+      max-width: 90vw;
+    }
+  }
 </style>
 </head>
 <body>
@@ -132,7 +167,28 @@
 
   <!-- Food Cost Pro -->
   <article class="project-card">
-    <img src="assets/projects/foodcost-dashboard.png" alt="Food Cost Pro Dashboard" class="project-card__img" />
+    <div class="project-gallery" style="padding: 20px 20px 12px;">
+      <div class="project-gallery__item">
+        <img src="assets/projects/04-analytics.png" alt="Analytics Dashboard" />
+        <div class="project-gallery__caption"><strong>Analytics</strong> — Top items, spending by vendor, price alerts</div>
+      </div>
+      <div class="project-gallery__item">
+        <img src="assets/projects/01-recipes.png" alt="Recipe Builder" />
+        <div class="project-gallery__caption"><strong>Recipes</strong> — Build recipes, auto-calculate cost per portion</div>
+      </div>
+      <div class="project-gallery__item">
+        <img src="assets/projects/02-price-sheet.png" alt="Price Sheet" />
+        <div class="project-gallery__caption"><strong>Price Sheet</strong> — Track prices across vendors, spot changes</div>
+      </div>
+      <div class="project-gallery__item">
+        <img src="assets/projects/05-plates.png" alt="Plate Costing" />
+        <div class="project-gallery__caption"><strong>Plates</strong> — Combine recipes, set food cost %, get menu price</div>
+      </div>
+      <div class="project-gallery__item">
+        <img src="assets/projects/03-data.png" alt="Invoice Data" />
+        <div class="project-gallery__caption"><strong>Data</strong> — All parsed invoices, searchable, exportable</div>
+      </div>
+    </div>
     <div class="project-card__content">
       <span class="project-card__tag">Live Project</span>
       <h2 class="project-card__title">Food Cost Pro</h2>
@@ -150,7 +206,7 @@
         <span class="project-card__feature">Multi-restaurant support</span>
       </div>
       <div class="project-card__links">
-        <a href="https://demo.jasmatiproduction.com" class="project-card__link project-card__link--primary">Try the demo</a>
+        <a href="https://foodcost-saas.jasmati.workers.dev" class="project-card__link project-card__link--primary">Try the demo</a>
         <a href="contact.html" class="project-card__link">Build something similar</a>
       </div>
     </div>
