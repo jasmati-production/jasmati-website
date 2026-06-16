@@ -29,6 +29,29 @@
   });
 })();
 
+// Mobile nav (hamburger) — injected so it works on every page
+(function () {
+  const header = document.querySelector('.site-header');
+  const nav = document.querySelector('.nav');
+  if (!header || !nav) return;
+  const btn = document.createElement('button');
+  btn.className = 'nav__toggle';
+  btn.setAttribute('aria-label', 'Toggle menu');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<span></span><span></span><span></span>';
+  nav.appendChild(btn);
+  btn.addEventListener('click', () => {
+    const open = header.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('.nav__links a').forEach(a =>
+    a.addEventListener('click', () => header.classList.remove('is-open'))
+  );
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) header.classList.remove('is-open');
+  });
+})();
+
 // Contact form (mock submit)
 (function () {
   const form = document.querySelector('#contact-form');
